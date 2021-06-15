@@ -56,12 +56,12 @@ GET | /urls/:urlId/uses/:useId | retrieve a use metric by id for a given short u
 
 Short URLs cannot be deleted once created, because this would break existing links.
 
-*List
-*Create
+* List
+* Create
 
 POST `{ data: {"href":"www.some-url.com"} }` to `/urls` should assign an `id` to the object, save it, and return the saved object as a response to the client.
 
-*Read
+* Read
 
 Additionally, use records are created as a side-effect of a GET request to `/urls/:urlId`. Each use record contains an `id`, a `urlId` which corresponds to id of the URL being tracked by the use metric, and a `time` property (set to `Date.now()`) indicating when the use metric was recorded.
 
