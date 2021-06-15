@@ -10,11 +10,13 @@ If you would like to install this on your computer and test it out:
 * Type and enter`cd ~/Desktop` to set our destination folder as Desktop.
 * Type `git clone`, a space, then paste the `HTTPS` link. 
 * Hit `Enter/Return` to download the files. 
-* Type and enter `cd ./Thinkful-Robust-Server-Structure-Assignment/`, then move on to running the server or testing the code. 
+* Type and enter `cd ./Thinkful-Robust-Server-Structure-Assignment/`
+* Type and enter `npm i`.  This downloads some additional files for the project to work. If this command doesn't work for you, you might need to install Node Package Manager before you continue. You can do that [here](https://nodejs.org/en/)
+* Move on to the "running the server" or "testing the code" section. 
 
 Running the Server
 -----------------
-* Type and enter `npm i` This downloads some additional files for the project to work. If this command doesn't work for you, you might need to install Node Package Manager before you continue. You can do that [here](https://nodejs.org/en/).
+
 * Type and enter `npm run start: dev`. This starts the server. Leave your Terminal/Powershell window open.
 * Open a web browser and visit `localhost:5000/urls` to ensure the server is running. 
 * When you are ready to close the server, go to your Terminal/Powershell and press `ctrl/cmd + c`to close. 
