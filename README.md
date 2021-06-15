@@ -75,8 +75,6 @@ Additionally, use records are created as a side-effect of a GET request to `/url
 
 * Read Short URL Use
 
-* List Short URL uses's in postman
-
 The service should return a `404` error if the `:urlId` and `:useId` are mis-matched. For example, if you send a GET request to `/42/uses/79` and useId `79` is NOT associated with urlId `42` the server should respond with `404`.
 
 ## Create routes and handlers to create, read, update, delete, and list use metrics related to short urls
