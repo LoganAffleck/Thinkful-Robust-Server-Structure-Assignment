@@ -56,25 +56,26 @@ GET | /urls/:urlId/uses/:useId | retrieve a use metric by id for a given short u
 
 Short URLs cannot be deleted once created, because this would break existing links.
 
-### ListCreate
+*List
+*Create
 
 POST `{ data: {"href":"www.some-url.com"} }` to `/urls` should assign an `id` to the object, save it, and return the saved object as a response to the client.
 
-### Read
+*Read
 
 Additionally, use records are created as a side-effect of a GET request to `/urls/:urlId`. Each use record contains an `id`, a `urlId` which corresponds to id of the URL being tracked by the use metric, and a `time` property (set to `Date.now()`) indicating when the use metric was recorded.
 
-### Update
+* Update
 
-### List
+* List
 
-### Delete
+* Delete
 
-### List Short URL Uses
+* List Short URL Uses
 
-### Read Short URL Use
+* Read Short URL Use
 
-### List Short URL uses's in postman
+* List Short URL uses's in postman
 
 The service should return a `404` error if the `:urlId` and `:useId` are mis-matched. For example, if you send a GET request to `/42/uses/79` and useId `79` is NOT associated with urlId `42` the server should respond with `404`.
 
@@ -89,16 +90,16 @@ GET | /uses | retrieve a list of all use metrics
 
 The uses resources have a path of `/uses` and are a record of every `GET` request for a specific short url.
 
-### Create
+* Create
 Creating use records through the API is not allowed. Use records are created as a side-effect of a GET request to `/urls/:urlId`.
 
-### Read
+* Read
 
-### Update
+* Update
 
-### Delete
+* Delete
 
-### List
+* List
 
 ## Handle errors properly
 * Return a `404` error for any non-existent path or resource
