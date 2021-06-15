@@ -2,7 +2,8 @@ Thinkful Assignment: Robust Server Structure
 =============================================
 This project required use of Express syntax to create API request controllers. The files I edited are in `src` and were coded to get the tests in `test` to pass. 
 
-##Installation
+Installation
+------------
 If you would like to install this on your computer and test it out: 
 * Click "↓ Code" and copy the `HTTPS` link ending in `.git`.
 * Open Terminal or Windows PowerShell.
@@ -14,7 +15,8 @@ If you would like to install this on your computer and test it out:
 * Type and enter `npm run start: dev`. This starts the server. 
 * Finally, open a web browser and visit `localhost:5000/urls` to ensure the server is running. 
 
-##Sending a Request
+Sending a Request
+-----------------
 * If you would like to send a request, download and install [Insomnia](https://insomnia.rest/).
 * Open Insomnia and click `Create` > and under "New", `Request Collection`.
 * Inside the collection, press `ctrl/cmd+N` or `New Request`.
@@ -24,23 +26,23 @@ If you would like to install this on your computer and test it out:
 
 
 
-##Assignment Instructions
+## Assignment Instructions
 Your task is to build a URL shortener service API using Node.js and Express. It should allow users to submit a URL and receive a "shortened" code, or ID, that can be used to retrieve the original URL later. It should also keep track of how often each shortened URL is retrieved so you can calculate the most popular URL's.
 
-##What is a URL Shortener?
+## What is a URL Shortener?
 The e-commerce company that you work for sells many different products under different categories. For example: `www.shoppingsite.com/category/shoe/product/nike132032.`
 
 If a customer wants to share a link to the product on Twitter, they may run into restrictions on the text length.
 
 A URL shortener service overcomes this issue by shortening `www.shoppingsite.com/category/shoe/product/nike/132032` to `www.shoppingsite.com/8d13lk2k.`
 
-##Existing files
+## Existing files
 You will only need to edit the `src` folder and to follow code organization principles you learned in this module.
 
 Use the existing data files located in `src/data` for the responses. Feel free to add or remove data from the files as necessary, but keep the same shape of the data.
 
-##Tasks
-###Create routes and handlers to create, read, update, delete, and list short urls
+## Tasks
+### Create routes and handlers to create, read, update, delete, and list short urls
 You will need to create the following API endpoints for the `urls` resources:
 
 HTTP Verb | Path | Description
@@ -54,29 +56,29 @@ GET | /urls/:urlId/uses/:useId | retrieve a use metric by id for a given short u
 
 Short URLs cannot be deleted once created, because this would break existing links.
 
-###Create
+### ListCreate
 
 POST `{ data: {"href":"www.some-url.com"} }` to `/urls` should assign an `id` to the object, save it, and return the saved object as a response to the client.
 
-###Read
+### Read
 
 Additionally, use records are created as a side-effect of a GET request to `/urls/:urlId`. Each use record contains an `id`, a `urlId` which corresponds to id of the URL being tracked by the use metric, and a `time` property (set to `Date.now()`) indicating when the use metric was recorded.
 
-###Update
+### Update
 
-###List
+### List
 
-###Delete
+### Delete
 
-###List Short URL Uses
+### List Short URL Uses
 
-###Read Short URL Use
+### Read Short URL Use
 
-###List Short URL uses's in postman
+### List Short URL uses's in postman
 
 The service should return a `404` error if the `:urlId` and `:useId` are mis-matched. For example, if you send a GET request to `/42/uses/79` and useId `79` is NOT associated with urlId `42` the server should respond with `404`.
 
-##Create routes and handlers to create, read, update, delete, and list use metrics related to short urls
+## Create routes and handlers to create, read, update, delete, and list use metrics related to short urls
 You will need to create the following API endpoints for the uses resources:
 
 HTTP Verb |	Path | Description
@@ -87,22 +89,22 @@ GET | /uses | retrieve a list of all use metrics
 
 The uses resources have a path of `/uses` and are a record of every `GET` request for a specific short url.
 
-###Create
+### Create
 Creating use records through the API is not allowed. Use records are created as a side-effect of a GET request to `/urls/:urlId`.
 
-###Read
+### Read
 
-###Update
+### Update
 
-###Delete
+### Delete
 
-###List
+### List
 
-##Handle errors properly
+## Handle errors properly
 * Return a `404` error for any non-existent path or resource
 * Methods that are not allowed should return `405` (e.g., a DELETE request sent to `/urls/:urlId`)
 
-##Saving data
+## Saving data
 There is no database in use for this project. All changes are stored in-memory.
 
 The short url data is exported from `/src/data/urls-data.js`.
@@ -115,7 +117,7 @@ Add and remove data from the arrays using `.push()` and `.splice()` respectively
 
 When you restart your server, any changes made to these arrays will be lost.
 
-##Assigning IDs
+## Assigning IDs
 IDs are often assigned by the database. Since your API is not connected to a database, you can use `array.length + 1` to assign ID's, as follows:
 
 ```
