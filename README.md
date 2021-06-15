@@ -1,4 +1,5 @@
-#Thinkful Assignment: Robust Server Structure
+Thinkful Assignment: Robust Server Structure
+=============================================
 This project required use of Express syntax to create API request controllers. The files I edited are in `src` and were coded to get the tests in `test` to pass. 
 
 ##Installation
